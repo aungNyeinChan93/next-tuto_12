@@ -5,7 +5,7 @@ interface Props {
   title?: string;
   body?: string;
 }
-const Hero = async ({ title, body }: Props) => {
+const Hero = ({ title, body }: Props) => {
   return (
     <React.Fragment>
       <main>
