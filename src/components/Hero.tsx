@@ -1,11 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-
+import fs from "fs";
 interface Props {
   title?: string;
   body?: string;
 }
-const Hero = ({ title, body }: Props) => {
+const Hero = async ({ title, body }: Props) => {
+  const response = await fetch("https://dummyjson.com/users");
+  const { users } = await response.json();
+  console.log(users);
+  console.log("hero component");
+
+  const test_file = await fs.promises.readFile("src/test.txt", "utf-8");
+  console.log(test_file);
+
   return (
     <React.Fragment>
       <main>
