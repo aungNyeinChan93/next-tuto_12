@@ -16,7 +16,7 @@ const HomePage = () => {
         {/* <Time />
         <TestDynamic />
         <TestsPage /> */}
-        {/* <Hero /> */}
+        <Hero />
       </main>
     </React.Fragment>
   );
