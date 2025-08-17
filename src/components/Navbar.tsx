@@ -1,5 +1,7 @@
 import React from "react";
 import Navlinks from "./Navlinks";
+import { SignedIn, UserButton, UserProfile } from "@clerk/nextjs";
+import Link from "next/link";
 
 const Navbar = async () => {
   return (
@@ -20,7 +22,14 @@ const Navbar = async () => {
               />
             </svg>
           </a>
+
           <Navlinks />
+          <SignedIn>
+            <span className="text-slate-500 text-xs cursor-pointer font-semibold">
+              <Link href={"/tests/profile"}>👤</Link>
+            </span>
+            <UserButton />
+          </SignedIn>
         </div>
       </header>
     </React.Fragment>
