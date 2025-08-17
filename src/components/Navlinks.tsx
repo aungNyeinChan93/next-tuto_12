@@ -79,13 +79,17 @@ const Navlinks = () => {
             </li>
 
             <li>
-              <a
-                className="text-gray-500 transition hover:text-gray-500/75"
-                href="#"
+              <Link
+                className={`transition hover:text-gray-500/75 ${
+                  pathname === "/tests/mock-users"
+                    ? "text-red-600"
+                    : "text-gray-500"
+                }`}
+                href={"/tests/mock-users"}
               >
                 {" "}
-                Blog{" "}
-              </a>
+                Mock Users{" "}
+              </Link>
             </li>
           </ul>
         </nav>

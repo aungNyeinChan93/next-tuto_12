@@ -5,7 +5,7 @@ export const getQuotes = async (limit: string | number): Promise<Quotes> => {
   const response = await fetch(
     `http://localhost:3000/api/quotes?limit=${limit}`
   );
-  if (!response.ok) throw new Error("quotes fetch fail@!");
+  if (!response.ok) throw new Error("quotes fetch fail!");
   const quotes: Quotes = await response.json();
   return quotes;
 };
